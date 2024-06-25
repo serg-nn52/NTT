@@ -32,7 +32,7 @@ const handlerSelect = (value: string[]) => {
     severity: 'success',
     summary: `Выбрано!`,
     detail: value.join('\n'),
-    life: 300000,
+    life: 3000,
   });
 };
 </script>
