@@ -59,15 +59,19 @@ const onNodeUnselect = (node: INode) => {
 //Закрываю модалку
 const closedModal = () => {
   visible.value = false;
+  //сбрасываю значения после закрытия модалки
+  selectedKey.value = null;
+  selectedNode.value = [];
 };
 
 const saveData = () => {
-  closedModal();
   //отправляю label как идентификатор, чтобы вывести пользователю в моей реализации, возможно key, если нужна уникальность
-  emits(
-    'select',
-    selectedNode.value.map((el) => el.label),
-  );
+  if (selectedNode.value.length)
+    emits(
+      'select',
+      selectedNode.value.map((el) => el.label),
+    );
+  closedModal();
 };
 </script>
 
