@@ -65,4 +65,18 @@ export const nodes: INode[] = [
       },
     ],
   },
+  {
+    key: '3',
+    label: 'Movies1',
+    data: 'Movies Folder',
+    icon: 'pi pi-fw pi-star-fill',
+    children: [
+      {
+        key: '3s-1',
+        label: 'Robert De Niro',
+        icon: 'pi pi-fw pi-star-fill',
+        data: 'De Niro Movies',
+      },
+    ],
+  },
 ];

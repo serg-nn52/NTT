@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="wrapper">
-      <Toast />
+      <Toast class="toast" />
       <Button label="Открыть" @click="visible = true" />
       <ModalWindow
         @select="(value) => handlerSelect(value)"
@@ -32,7 +32,7 @@ const handlerSelect = (value: string[]) => {
     severity: 'success',
     summary: `Выбрано!`,
     detail: value.join('\n'),
-    life: 3000,
+    life: 300000,
   });
 };
 </script>
